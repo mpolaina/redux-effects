@@ -1,0 +1,38 @@
+
+<h3 class="my-4">
+  <i class="far fa-clipboard-list-check"></i>
+  <span class="ms-2">Lista works!</span>
+</h3>
+
+<div class="row row-cols-1 row-cols-md-2">
+    <div class="col"*ngFor="let usuario of usuarios" >
+      <div class="card mb-3 g-0" >
+
+        <div class="row g-0">
+
+            <div class="col-md-4">
+              <img [src]="usuario.avatar" class="card-img-top">
+            </div>
+
+            <div class="col-md-8">
+                <div class="card-body">
+                  <h3 class="card-title mb-0">
+                    {{ usuario.first_name }} {{ usuario.last_name }}
+                  </h3>
+                  <p class="card-text mb-1 text-secondary">{{ usuario.email}} ID: {{ usuario.id }}</p>
+                  <p class="card-text texto-small">
+                    Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+
+                </div>
+            </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+</div>
+
+
