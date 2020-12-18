@@ -1,10 +1,28 @@
 
-<h3 class="my-4">
+<h4 class="my-3">
   <i class="far fa-clipboard-list-check"></i>
-  <span class="ms-2">Lista works!</span>
-</h3>
+  <span class="ms-2">Lista usuarios</span>
+</h4>
 
-<div class="row row-cols-1 row-cols-md-2">
+<!-- Cargando Alert -->
+<div *ngIf="cargando" class="alert alert-info text-center" role="alert">
+  <h4 class="alert-heading">
+    <i class="fal fa-sync fa-spin"></i>
+    Cargando
+  </h4>
+</div>
+
+<!-- Error Alert -->
+<div *ngIf="verError" class="alert alert-danger text-center" role="alert">
+  <h4 class="alert-heading">
+    <i class="fal fa-bomb"></i>
+    ¡Error! Algo salió mal...
+  </h4>
+  <!-- <pre> {{ verError | json }}</pre> -->
+</div>
+
+<div *ngIf="!cargando"
+     class="row row-cols-1 row-cols-md-2">
     <div class="col"*ngFor="let usuario of usuarios" >
       <div class="card mb-3 g-0" >
 
